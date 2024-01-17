@@ -2,7 +2,6 @@ syntax = "proto3";
 
 option go_package = "Grpc.Service.App;sv1";
 
-import "google/protobuf/timestamp.proto";
 
 package Loyalty;
 
@@ -16,8 +15,8 @@ message AddNewPromoCodeRequest{
   string name = 1;
   int32 typeDiscount = 2;
   int32 valueDiscount = 3;
-  google.protobuf.Timestamp dateStartActive = 4;
-  google.protobuf.Timestamp dateFinishActive = 5;
+  string dateStartActive = 4;
+  string dateFinishActive = 5;
   int32 countUses = 6;
 }
 message AddNewPromoCodeResponse{
